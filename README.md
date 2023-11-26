@@ -1,21 +1,24 @@
-# Get the Credit Card
+# get the credit card 💳
 
-This is a simple Node.js project that provides information about credit cards through API calls. The application retrieves details about credit cards, including validity, scheme (VISA, MASTERCARD, AMEX), and, when available, the bank.
+this is a simple node.js project that provides information about credit cards through API calls. the application retrieves details about credit cards, including validity, scheme (VISA, MASTERCARD, AMEX), and, when available, the bank.
 
-## Description
+## description
 
-The goal is to retrieve a series of information on credit cards through API calls.
-The application should provide its consumers with the details about credit cards:
-* Valid/not valid;
-* The scheme (i.e VISA, MASTERCARD or AMEX);
-* The bank when it is available.
+the goal is to retrieve a series of information on credit cards through API calls.
+the application should provide its consumers with the details about credit cards:
 
-### Step 1
-Create a REST API service that will reply to a GET call. The endpoint should look like this: this:
+- valid/not valid;
+- the scheme (i.e VISA, MASTERCARD or AMEX);
+- the bank when it is available.
+
+### step 1
+
+create a REST API service that will reply to a GET call. The endpoint should look like this: this:
 
 `GET <web-server-address>/api/card-scheme/verify/<card-number>`
 
-In case of successfull response, the returned object should look like this:
+in case of successful response, the returned object should look like this:
+
 ```
 {
   "success": true
@@ -23,18 +26,20 @@ In case of successfull response, the returned object should look like this:
           "scheme": "visa",
           "type" : "debit",
           "bank" : "UBS"
-        }    
+        }
 }
 ```
-To obtain this information, you should use a 3rd party service, such as [BinList](https://binlist.net/).
 
-### Step 2 (incomplete for now)
+to obtain this information, you should use a 3rd party service, such as [BinList](https://binlist.net/).
 
-Create a REST API service that will reply to a GET call. The endpoint should look like this:
+### step 2 (incomplete for now)
+
+create a REST API service that will reply to a GET call. The endpoint should look like this:
 
 `GET <web-server-address>/api/card-scheme/stats?start=1&limit=3`
 
-In case of successfull response, the returned object should look like this:
+in case of successful response, the returned object should look like this:
+
 ```
 {
       "success": true
@@ -48,37 +53,39 @@ In case of successfull response, the returned object should look like this:
       }
 }
 ```
-where `size` represents the byte of the payload. Inside the payload, provide the list of cards that were checked in the Step 1 alongside the number of requests made for each card. You can store this information in memory or on a file.
+
+where `size` represents the byte of the payload. Inside the payload, provide the list of cards that were checked in the step 1 alongside the number of requests made for each card. You can store this information in memory or on a file.
 
 ---
 
-## How To Use The project
+## how to use the project 🚀
 
-### Prerequisites
+### prerequisites
 
-- [Node.js](https://nodejs.org/) installed.
+- you should have [Node.js](https://nodejs.org/) installed.
 
-### Installation
+### installation
 
-Clone the repository:
+clone the repository:
 
 ```bash
 git clone https://github.com/your-username/node-project_credit-card.git
 ```
 
-#### For Step 1:
+#### for step 1:
 
-1. Navigate to the project folder:
+1. navigate to the project folder:
    ```node
    cd step1_verify
    ```
-2. Install dependencies:
+2. install dependencies:
    ```node
    npm install express
    npm install axios
    ```
+3. run the project
 
-#### For Step 2
+#### for step 2
 
 1. Navigate to the project folder:
    ```node
@@ -88,16 +95,17 @@ git clone https://github.com/your-username/node-project_credit-card.git
    ```node
    npm install express
    ```
+3. run the project
 
 ---
 
-## License
+## license 📝
 
 This project is licensed under the MIT License.
 
-## Contact
+## contact 📬
 
-If you have any further questions:
+if you have any further questions:
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Gmail][gmail-shield]][gmail-url]
